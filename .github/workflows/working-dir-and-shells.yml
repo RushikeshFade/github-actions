@@ -1,0 +1,22 @@
+name: Working with Dirs & shells
+on:
+    workflow_dispatch:
+jobs:
+    run-commands:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+            - name: Run a command in a different working directory
+              run: |
+                  mkdir -p mydir
+                  cd mydir
+                  echo "Hello from a different working directory" > output.txt
+            - name: Run a command using a different shell
+              shell: bash
+              run: |
+                  echo "Hello from bash shell"
+            - name: Run a command using PowerShell
+              shell: pwsh
+              run: |
+                  Write-Output "Hello from PowerShell"
