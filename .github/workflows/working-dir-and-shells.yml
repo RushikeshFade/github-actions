@@ -1,5 +1,9 @@
 name: Working with Dirs & shells
 on:
+    push:
+        branches:
+            - workflow/practice
+
     workflow_dispatch:
 jobs:
     run-commands:
