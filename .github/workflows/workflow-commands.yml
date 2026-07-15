@@ -1,9 +1,7 @@
 name: Workflow Commands
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - Workflow-Commands
+
 jobs:
   workflow-commands:
     runs-on: ubuntu-latest
